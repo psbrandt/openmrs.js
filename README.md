@@ -3,6 +3,8 @@
 # openmrs.js
 
 [![Build Status](https://img.shields.io/travis/psbrandt/openmrs.js/master.svg)](https://travis-ci.org/psbrandt/psbrandt)
+[![Code Quality](https://api.codacy.com/project/badge/grade/bf97cb1b214044068f59820708891c45)](https://www.codacy.com/app/openmrs/openmrs-js)
+[![Test Coverage](https://api.codacy.com/project/badge/coverage/bf97cb1b214044068f59820708891c45)](https://www.codacy.com/app/openmrs/openmrs-js)
 ![Experimental](https://img.shields.io/badge/status-experimental-F26522.svg)
 
 > JavaScript client library for the [OpenMRS](http://openmrs.org) API
