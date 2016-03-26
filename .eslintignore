@@ -1,3 +1,5 @@
-node_modules
-lib
+node_modules/*
+lib/*
+test/fixtures/*
+coverage/*
 README.md

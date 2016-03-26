@@ -4,5 +4,5 @@ node_js:
 before_script:
   - npm install -g codacy-coverage coveralls
 after_script:
-  - cat coverage/**/lcov.info | codacy-coverage
-  - cat coverage/**/lcov.info | coveralls
+  - cat coverage/lcov.info | codacy-coverage
+  - cat coverage/lcov.info | coveralls

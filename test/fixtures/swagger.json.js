@@ -1,4 +1,4 @@
-{
+module.exports = {
   "swagger" : "2.0",
   "info" : {
     "version" : "1.11.6",
