@@ -1,6 +1,6 @@
 /* eslint-disable func-names,no-var */
 import chai from 'chai';
-import OpenMRS from '../lib/openmrs.js';
+import OpenMRS from '../src/openmrs';
 
 let lib;
 

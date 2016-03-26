@@ -15,7 +15,7 @@ OpenMRS API in node or the browser.
 ##### Browser
 
 ```html
-<script src="https://cdn.openmrs.org/0.1.1/openmrs.bundle.js"></script>
+<script src="lib/openmrs.bundle.min.js"></script>
 ```
 
 or using Bower:

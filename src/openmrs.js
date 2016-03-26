@@ -10,7 +10,7 @@ export default class OpenMRS {
     this._name = 'OpenMRS';
 
     /** Used as the semantic version number. */
-    this._version = __OPENMRS_JS_VERSION__; // eslint-disable-line no-undef
+    this._version = '0.0.1';
 
     this._api = undefined;
   }
