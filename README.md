@@ -28,12 +28,16 @@ npm install openmrs.js
 
 ## Usage
 
+:bulb: **You will need version `2.14+` of the [webservices.rest module](https://modules.openmrs.org/#/show/153/webservices-rest). Currently this
+requires building it from [source](https://github.com/openmrs/openmrs-module-webservices.rest).**
+
+
 ```js
-const OpenMRS = require('openmrs');
+const OpenMRS = require(`openmrs`);
 const config = {
-  user: 'admin',
-  pass: 'Admin123',
-  url: 'http://localhost:8082/openmrs-standalone/module/webservices/rest/swagger.json',
+  user: `admin`,
+  pass: `Admin123`,
+  url: `http://localhost:8082/openmrs-standalone/module/webservices/rest/swagger.json`,
 };
 
 const o = new OpenMRS(config);
@@ -73,7 +77,7 @@ operations for the 'patient' tag
 
 The library code is automatically generated using [swagger-js](https://github.com/swagger-api/swagger-js)
 when a new instance is created, so the API available to you will depend on the
-version on OpenMRS you are running, and which modules you have installed.
+version of OpenMRS you are running, and which modules you have installed.
 
 You will always be able to see your API documentation in the OpenMRS web application
 by navigating to the advanced admin screen and clicking the _API Documentation_ link.
@@ -97,7 +101,7 @@ npm run build
 npm test
 ```
 
-Check out the [npm scripts](https://github.com/psbrandt/openmrs.js/blob/master/package.json#L33-L46) for more stuff you can do.
+Check out the [npm scripts](https://github.com/psbrandt/openmrs.js/blob/master/package.json#L35-L48) for more stuff you can do.
 
 ## Community
 
