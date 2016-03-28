@@ -1,2 +1,4 @@
 instrumentation:
   root: src
+reporting:
+  dir: ./coverage-node

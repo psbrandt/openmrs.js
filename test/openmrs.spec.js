@@ -1,9 +1,10 @@
 /* eslint-disable func-names,no-var */
+/* eslint-env mocha */
 import chai from 'chai';
-import nock from 'nock';
 import OpenMRS from '../src/openmrs';
 import chaiAsPromised from 'chai-as-promised';
 import swaggerSpec from './fixtures/swagger.json';
+import fauxJax from 'faux-jax';
 
 const expect = chai.expect;
 let lib;
@@ -37,26 +38,58 @@ describe('After contructing a new instance of OpenMRS', () => {
   });
 
   describe('loggin in', () => {
-    it('should succeed with correct details', () => {
-      nock('http://localhost:8080/openmrs')
-        .get('/module/webservices/rest/swagger.json')
-        .reply(200, JSON.stringify(swaggerSpec));
-
-      return expect(lib.login('admin', 'Admin123', 'http://localhost:8080/openmrs/module/webservices/rest/swagger.json')).to.eventually.be.fulfilled;
+    beforeEach(() => {
+      fauxJax.install();
     });
 
-    it('should fail with invalid URL', () =>
-      expect(lib.login('admin', 'Admin123', 'http://junk.url')).to.eventually.be.rejected
-    );
+    afterEach(() => {
+      fauxJax.restore();
+    });
+
+    it('should succeed with correct details', () => {
+      fauxJax.on('request', (req) => {
+        req.respond(200, {
+          'Content-Type': 'application/json',
+        }, JSON.stringify(swaggerSpec));
+      });
+
+      const deferred = lib.login('admin', 'Admin123', 'http://localhost:8080/openmrs/module/webservices/rest/swagger.json');
+
+      return expect(deferred).to.eventually.be.fulfilled;
+    });
+
+    it('should fail with invalid URL', () => {
+      fauxJax.on('request', (req) => {
+        req.respond(404, {
+          'Content-Type': 'application/json',
+        }, '');
+      });
+
+      const deferred = lib.login('admin', 'Admin123', 'http://junk.url');
+
+      return expect(deferred).to.eventually.be.rejected;
+    });
   });
 
   describe('accessing the API after logging in', () => {
-    it('should succeed', () => {
-      nock('http://localhost:8080/openmrs')
-        .get('/module/webservices/rest/swagger.json')
-        .reply(200, JSON.stringify(swaggerSpec));
+    beforeEach(() => {
+      fauxJax.install();
+    });
 
-      return expect(lib.login('admin', 'Admin123', 'http://localhost:8080/openmrs/module/webservices/rest/swagger.json')
+    afterEach(() => {
+      fauxJax.restore();
+    });
+
+    it('should succeed', () => {
+      fauxJax.on('request', (req) => {
+        req.respond(200, {
+          'Content-Type': 'application/json',
+        }, JSON.stringify(swaggerSpec));
+      });
+
+      const deferred = lib.login('admin', 'Admin123', 'http://localhost:8080/openmrs/module/webservices/rest/swagger.json');
+
+      return expect(deferred
         .then(o => // eslint-disable-line no-unused-vars
           lib.api
         )).to.eventually.be.fulfilled;

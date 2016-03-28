@@ -84,6 +84,10 @@ by navigating to the advanced admin screen and clicking the _API Documentation_ 
 
 Static API documentation for the OpenMRS Reference Application can be found [here](https://psbrandt.github.io/openmrs-refapp-docker).
 
+## Browser Support
+
+[![Browser Support](https://saucelabs.com/browser-matrix/openmrs-js.svg)](https://saucelabs.com/u/openmrs-js)
+
 ## Development
 
 See the OpenMRS [CONTRIBUTING](https://github.com/openmrs/openmrs-core/blob/master/CONTRIBUTING.md) guidelines.
@@ -101,7 +105,7 @@ npm run build
 npm test
 ```
 
-Check out the [npm scripts](https://github.com/psbrandt/openmrs.js/blob/master/package.json#L35-L48) for more stuff you can do.
+Check out the [npm `scripts`](https://github.com/psbrandt/openmrs.js/blob/master/package.json) for more stuff you can do.
 
 ## Community
 

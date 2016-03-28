@@ -3,6 +3,8 @@ node_js:
   - "5.1"
 before_script:
   - npm install -g codacy-coverage coveralls
+script:
+  - npm run test:travis
 after_script:
   - cat coverage/lcov.info | codacy-coverage
   - cat coverage/lcov.info | coveralls
