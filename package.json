@@ -43,7 +43,7 @@
     "yargs": "^4.3.1"
   },
   "scripts": {
-    "clean": "rimraf lib",
+    "clean": "rimraf lib && rimraf coverage*",
     "build:web": "webpack --progress --colors --mode=dev --target=web",
     "build:web:prod": "webpack --progress --colors  --mode=production --target=web",
     "build:node": "webpack --progress --colors --mode=dev --target=node",
@@ -56,7 +56,7 @@
     "test:browser": "./node_modules/.bin/karma start --single-run --no-auto-watch karma.conf.js",
     "test:browser:sauce": "./node_modules/.bin/karma start --single-run --no-auto-watch karma.conf-ci.js",
     "test:all": "npm run test:node && npm run test:browser",
-    "combine-coverage": "./node_modules/.bin/istanbul-combine -d coverage -p summary -r lcov -r html -r json coverage-browser/coverage*.json coverage-node/coverage*.json",
+    "combine-coverage": "./node_modules/.bin/istanbul-combine -d coverage -p summary -r lcov -r html -r json coverage-browser/**/coverage*.json coverage-node/coverage*.json",
     "test": "npm run test:all && npm run combine-coverage",
     "test:travis": "npm run test:node && npm run test:browser:sauce && npm run combine-coverage",
     "lint": "eslint ./",

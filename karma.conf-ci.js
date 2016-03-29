@@ -94,18 +94,16 @@ module.exports = function (config) {
     reporters: ['progress', 'coverage', 'saucelabs'],
 
     coverageReporter: {
-      dir: 'coverage-browser',
+      dir: 'coverage-browser/',
       reporters: [
         {
           type: 'html',
-          subdir: 'html',
-        }, {
+        },
+        {
           type: 'lcovonly',
-          subdir: '.',
         },
         {
           type: 'json',
-          subdir: '.',
         },
       ],
     },
