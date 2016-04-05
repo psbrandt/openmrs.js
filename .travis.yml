@@ -15,4 +15,5 @@ deploy:
   on:
     tags: true
   skip_cleanup: true
+  email: pascal@openmrs.org
   api_key: $NPM_TOKEN

@@ -78,6 +78,8 @@ operations for the 'patient' tag
   * createPatient: Create with properties in request
 ```
 
+See the [examples](docs/examples) for further demonstrations.
+
 ## API Documentation
 
 The library code is automatically generated using [swagger-js](https://github.com/swagger-api/swagger-js)
@@ -85,7 +87,7 @@ when a new instance is created, so the API available to you will depend on the
 version of OpenMRS you are running, and which modules you have installed.
 
 You will always be able to see your API documentation in the OpenMRS web application
-by navigating to the advanced admin screen and clicking the _API Documentation_ link.
+by navigating to the advanced admin screen and clicking the `API Documentation` link.
 
 Static API documentation for the OpenMRS Reference Application can be found [here](https://psbrandt.github.io/openmrs-refapp-docker).
 

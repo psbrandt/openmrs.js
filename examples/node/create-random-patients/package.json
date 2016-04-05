@@ -1,0 +1,11 @@
+{
+  "name": "create-random-patients",
+  "version": "1.0.0",
+  "description": "Create n random patients using openmrs.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "OpenMRS <pascal@openmrs.org> (http://openmrs.org)",
+  "license": "MPL-2.0"
+}
