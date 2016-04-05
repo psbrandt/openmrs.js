@@ -12,18 +12,24 @@
 This library provides a way for JavaScript developers to easily access the
 OpenMRS API in node or the browser.
 
+## Install
+
+```sh
+npm install openmrs.js@alpha
+```
+
 ## Setup
 
 ##### Browser
 
 ```html
-<script src="lib/openmrs.bundle.min.js"></script>
+<script src="node_modules/openmrs.js/lib/openmrs.bundle.min.js"></script>
 ```
 
 ##### Node
 
-```sh
-npm install openmrs.js
+```js
+const OpenMRS = require('openmrs.js');
 ```
 
 ## Usage
@@ -33,26 +39,25 @@ requires building it from [source](https://github.com/openmrs/openmrs-module-web
 
 
 ```js
-const OpenMRS = require(`openmrs`);
 const config = {
-  user: `admin`,
-  pass: `Admin123`,
-  url: `http://localhost:8082/openmrs-standalone/module/webservices/rest/swagger.json`,
+  user: 'admin',
+  pass: 'Admin123',
+  url: 'http://localhost:8080/openmrs',
 };
 
 const o = new OpenMRS(config);
 const deferred = o.login();
 
 deferred.then(() => {
-  o.api.location.get_location()
+  o.api.location.getAllLocations()
     .then(data => {
-      console.log(data.statusText)
+      console.log(data.obj);
     })
     .catch(error => {
-      throw new Error(`Houston, we have a problem`, error)
+      throw new Error('Houston, we have a problem', error);
     });
 }).catch(error => {
-  throw new Error(`That didn't work`, error);
+  throw new Error('That didn\'t work', error);
 });
 ```
 
@@ -61,16 +66,16 @@ You can also get help in the console:
 ```
 > o.api.patient.help()
 operations for the 'patient' tag
-  * delete_patient_uuid: Delete or purge resource by uuid
-  * get_patient_uuid: Fetch by uuid
-  * post_patient_uuid: Edit with given uuid, only modifying properties in request
-  * get_patient_parent_uuid_identifier: Fetch all non-retired identifier subresources
-  * post_patient_parent_uuid_identifier: Create identifier subresource with properties in request
-  * delete_patient_parent_uuid_identifier_uuid: Delete or purge resource by uuid
-  * get_patient_parent_uuid_identifier_uuid: Fetch identifier subresources by uuid
-  * post_patient_parent_uuid_identifier_uuid: Edit identifier subresource with given uuid, only modifying properties in request
-  * get_patient: Search for patient
-  * post_patient: Create with properties in request
+  * deletePatient: Delete or purge resource by uuid
+  * getPatient: Fetch by uuid
+  * updatePatient: Edit with given uuid, only modifying properties in request
+  * getAllPatientIdentifiers: Fetch all non-retired identifier subresources
+  * createPatientIdentifier: Create identifier subresource with properties in request
+  * deletePatientIdentifier: Delete or purge resource by uuid
+  * getPatientIdentifier: Fetch identifier subresources by uuid
+  * updatePatientIdentifier: Edit identifier subresource with given uuid, only modifying properties in request
+  * getAllPatients: Search for patient
+  * createPatient: Create with properties in request
 ```
 
 ## API Documentation

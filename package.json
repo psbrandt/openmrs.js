@@ -1,8 +1,11 @@
 {
   "name": "openmrs.js",
   "version": "0.0.1",
-  "description": "OpenMRS JavaScript Library",
   "main": "lib/openmrs.js",
+  "publishConfig": {
+    "tag": "alpha"
+  },
+  "description": "OpenMRS JavaScript Library",
   "dependencies": {
     "swagger-client": "^2.1.13"
   },
@@ -48,7 +51,8 @@
     "build:web:prod": "webpack --progress --colors  --mode=production --target=web",
     "build:node": "webpack --progress --colors --mode=dev --target=node",
     "build:node:prod": "webpack --mode=production --target=node",
-    "build": "npm run clean && npm run build:web:prod && npm run build:node:prod",
+    "build:prod": "npm run clean && npm run build:web:prod && npm run build:node:prod",
+    "build": "npm run clean && npm run build:web && npm run build:node && npm run build:web:prod && npm run build:node:prod",
     "dev:web": "npm run clean && webpack --progress --colors --watch --mode=dev --target=web",
     "dev:node": "npm run clean && webpack --progress --colors --watch --mode=dev --target=node",
     "dev:test": "mocha --compilers js:babel-core/register --colors -w ./test/*.spec.js",

@@ -8,3 +8,11 @@ script:
 after_script:
   - cat coverage/lcov.info | codacy-coverage
   - cat coverage/lcov.info | coveralls
+before_deploy:
+  - npm run build
+deploy:
+  provider: npm
+  on:
+    tags: true
+  skip_cleanup: true
+  api_key: $NPM_TOKEN
