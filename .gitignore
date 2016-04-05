@@ -4,3 +4,4 @@ coverage-node
 coverage-browser
 sauce_connect.log
 npm-debug.log
+lib

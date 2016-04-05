@@ -12,7 +12,7 @@ let lib;
 chai.expect();
 chai.use(chaiAsPromised);
 
-describe('After contructing a new instance of OpenMRS', () => {
+describe('After contructing a new instance of OpenMRS with no constructor parameters', () => {
   before(() => {
     lib = new OpenMRS();
   });
@@ -93,6 +93,152 @@ describe('After contructing a new instance of OpenMRS', () => {
         .then(o => // eslint-disable-line no-unused-vars
           lib.api
         )).to.eventually.be.fulfilled;
+    });
+  });
+});
+
+describe('Contructing a new instance of OpenMRS with the full URL constructor parameter', () => {
+  before(() => {
+    lib = new OpenMRS('http://localhost:8080/openmrs/module/webservices/rest/swagger.json');
+  });
+
+  describe('and logging in', () => {
+    beforeEach(() => {
+      fauxJax.install();
+    });
+
+    afterEach(() => {
+      fauxJax.restore();
+    });
+
+    it('should succeed with just the user and password', () => {
+      fauxJax.on('request', (req) => {
+        req.respond(200, {
+          'Content-Type': 'application/json',
+        }, JSON.stringify(swaggerSpec));
+      });
+
+      const deferred = lib.login('admin', 'Admin123');
+
+      return expect(deferred).to.eventually.be.fulfilled;
+    });
+  });
+});
+
+describe('Contructing a new instance of OpenMRS with the base URL and protocol', () => {
+  before(() => {
+    lib = new OpenMRS('http://localhost:8080/openmrs/module/webservices/rest/swagger.json');
+  });
+
+  describe('and logging in', () => {
+    beforeEach(() => {
+      fauxJax.install();
+    });
+
+    afterEach(() => {
+      fauxJax.restore();
+    });
+
+    it('should succeed with just the user and password', () => {
+      fauxJax.on('request', (req) => {
+        req.respond(200, {
+          'Content-Type': 'application/json',
+        }, JSON.stringify(swaggerSpec));
+      });
+
+      const deferred = lib.login('admin', 'Admin123');
+
+      return expect(deferred).to.eventually.be.fulfilled;
+    });
+  });
+});
+
+describe('Contructing a new instance of OpenMRS with the full URL without protocol', () => {
+  before(() => {
+    lib = new OpenMRS('localhost:8080/openmrs/module/webservices/rest/swagger.json');
+  });
+
+  describe('and logging in', () => {
+    beforeEach(() => {
+      fauxJax.install();
+    });
+
+    afterEach(() => {
+      fauxJax.restore();
+    });
+
+    it('should succeed with just the user and password', () => {
+      fauxJax.on('request', (req) => {
+        req.respond(200, {
+          'Content-Type': 'application/json',
+        }, JSON.stringify(swaggerSpec));
+      });
+
+      const deferred = lib.login('admin', 'Admin123');
+
+      return expect(deferred).to.eventually.be.fulfilled;
+    });
+  });
+});
+
+describe('Contructing a new instance of OpenMRS with the base URL without protocol', () => {
+  before(() => {
+    lib = new OpenMRS('localhost:8080/openmrs');
+  });
+
+  describe('and logging in', () => {
+    beforeEach(() => {
+      fauxJax.install();
+    });
+
+    afterEach(() => {
+      fauxJax.restore();
+    });
+
+    it('should succeed with just the user and password', () => {
+      fauxJax.on('request', (req) => {
+        req.respond(200, {
+          'Content-Type': 'application/json',
+        }, JSON.stringify(swaggerSpec));
+      });
+
+      const deferred = lib.login('admin', 'Admin123');
+
+      return expect(deferred).to.eventually.be.fulfilled;
+    });
+  });
+});
+
+describe('Contructing a new instance of OpenMRS with the config object', () => {
+  before(() => {
+    const config = {
+      user: 'admin',
+      pass: 'Admin123',
+      url: 'localhost:8080/openmrs',
+    };
+
+    lib = new OpenMRS(config);
+  });
+
+  describe('and logging in', () => {
+    beforeEach(() => {
+      fauxJax.install();
+    });
+
+    afterEach(() => {
+      fauxJax.restore();
+    });
+
+    it('should succeed with no parameters', () => {
+      fauxJax.on('request', (req) => {
+        req.respond(200, {
+          'Content-Type': 'application/json',
+        }, JSON.stringify(swaggerSpec));
+      });
+
+      const deferred = lib.login();
+
+      return expect(deferred).to.eventually.be.fulfilled;
     });
   });
 });
