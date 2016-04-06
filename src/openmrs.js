@@ -48,7 +48,7 @@ export default class OpenMRS {
     let specUrl = url;
 
     // make sure a protocol is specified
-    if (url.substring(0, 3) !== constants.OMRSJS_DEFAULT_PROTOCOL) {
+    if (url.substring(0, 4) !== constants.OMRSJS_DEFAULT_PROTOCOL) {
       specUrl = `${constants.OMRSJS_DEFAULT_PROTOCOL}://${specUrl}`;
     }
 

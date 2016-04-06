@@ -141,6 +141,7 @@ describe('Contructing a new instance of OpenMRS with the base URL and protocol',
 
     it('should succeed with just the user and password', () => {
       fauxJax.on('request', (req) => {
+        expect(req.requestURL).to.be.equal('http://localhost:8080/openmrs/module/webservices/rest/swagger.json');
         req.respond(200, {
           'Content-Type': 'application/json',
         }, JSON.stringify(swaggerSpec));
@@ -169,6 +170,7 @@ describe('Contructing a new instance of OpenMRS with the full URL without protoc
 
     it('should succeed with just the user and password', () => {
       fauxJax.on('request', (req) => {
+        expect(req.requestURL).to.be.equal('http://localhost:8080/openmrs/module/webservices/rest/swagger.json');
         req.respond(200, {
           'Content-Type': 'application/json',
         }, JSON.stringify(swaggerSpec));
@@ -197,6 +199,7 @@ describe('Contructing a new instance of OpenMRS with the base URL without protoc
 
     it('should succeed with just the user and password', () => {
       fauxJax.on('request', (req) => {
+        expect(req.requestURL).to.be.equal('http://localhost:8080/openmrs/module/webservices/rest/swagger.json');
         req.respond(200, {
           'Content-Type': 'application/json',
         }, JSON.stringify(swaggerSpec));
@@ -231,6 +234,7 @@ describe('Contructing a new instance of OpenMRS with the config object', () => {
 
     it('should succeed with no parameters', () => {
       fauxJax.on('request', (req) => {
+        expect(req.requestURL).to.be.equal('http://localhost:8080/openmrs/module/webservices/rest/swagger.json');
         req.respond(200, {
           'Content-Type': 'application/json',
         }, JSON.stringify(swaggerSpec));

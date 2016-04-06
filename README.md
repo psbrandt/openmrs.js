@@ -15,7 +15,7 @@ OpenMRS API in node or the browser.
 ## Install
 
 ```sh
-npm install openmrs.js@alpha
+npm install openmrs.js
 ```
 
 ## Setup
@@ -78,7 +78,7 @@ operations for the 'patient' tag
   * createPatient: Create with properties in request
 ```
 
-See the [examples](docs/examples) for further demonstrations.
+See the [examples](examples) for further demonstrations.
 
 ## API Documentation
 
