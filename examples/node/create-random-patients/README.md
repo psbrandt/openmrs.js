@@ -67,6 +67,6 @@ node create-random-patients --host http://localhost:8082/openmrs-standalone -n 1
 Are you using the Reference Application? If not, download the standalone [here](https://sourceforge.net/projects/openmrs/files/releases/OpenMRS_2.3.1/openmrs-standalone-2.3.1.zip/download)
 and use that instead.
 
-## Something About <kbd>Access-Control-Allow-Origin</kbd>
+### Something About <kbd>Access-Control-Allow-Origin</kbd>
 
 Read the **HTTP access control (CORS)** section [here](https://github.com/psbrandt/openmrs-contrib-apidocs/tree/swagger-ui#http-access-control-cors).
