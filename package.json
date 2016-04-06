@@ -2,9 +2,6 @@
   "name": "openmrs.js",
   "version": "0.0.2",
   "main": "lib/openmrs.js",
-  "publishConfig": {
-    "tag": "alpha"
-  },
   "description": "OpenMRS JavaScript Library",
   "dependencies": {
     "swagger-client": "^2.1.13"

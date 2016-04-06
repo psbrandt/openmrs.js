@@ -2,10 +2,20 @@
   "name": "create-random-patients",
   "version": "1.0.0",
   "description": "Create n random patients using openmrs.js.",
-  "main": "index.js",
+  "main": "create-random-patients.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "OpenMRS <pascal@openmrs.org> (http://openmrs.org)",
-  "license": "MPL-2.0"
+  "license": "MPL-2.0",
+  "dependencies": {
+    "chance": "^1.0.1",
+    "luhn-mod-n": "^1.0.1",
+    "openmrs.js": "0.0.2",
+    "progress": "^1.1.8",
+    "yargs": "^4.4.0"
+  },
+  "repository": {
+    "url": "https://github.com/psbrandt/openmrs.js/tree/master/examples/node/create-random-patients"
+  }
 }

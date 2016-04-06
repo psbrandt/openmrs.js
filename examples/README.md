@@ -8,7 +8,7 @@
 
 See the following for example usages in node.
 
-### Create Random Patients
+### [Create Random Patients](node/create-random-patients)
 
 This script with create `n` random patients.
 
