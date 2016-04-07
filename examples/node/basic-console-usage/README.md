@@ -6,6 +6,12 @@
 
 [![asciicast](https://asciinema.org/a/41489.png)](https://asciinema.org/a/41489)
 
+## Troubleshooting
+
+### Something About <kbd>Access-Control-Allow-Origin</kbd>
+
+Read the **HTTP access control (CORS)** section [here](https://github.com/psbrandt/openmrs-contrib-apidocs/tree/swagger-ui#http-access-control-cors).
+
 ## Community
 
 [![OpenMRS Talk](https://omrs-shields.psbrandt.io/custom/openmrs/talk/F26522?logo=openmrs)](http://talk.openmrs.org)

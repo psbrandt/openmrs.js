@@ -4,7 +4,7 @@
 
 > Example of how to use `openmrs.js` in the browser console
 
-![Browser Console](https://www.dropbox.com/s/cxlpmhbvwtvlbww/browser-console-usage.gif?raw=1)
+[![Browser Console](http://i.imgur.com/Z8KNRhc.png)](https://www.youtube.com/watch?v=6ccdMBASAnk)
 
 ## Troubleshooting
 
