@@ -6,6 +6,7 @@
 [![Code Quality](https://api.codacy.com/project/badge/grade/bf97cb1b214044068f59820708891c45)](https://www.codacy.com/app/openmrs/openmrs-js)
 [![Test Coverage](https://api.codacy.com/project/badge/coverage/bf97cb1b214044068f59820708891c45)](https://www.codacy.com/app/openmrs/openmrs-js)
 [![npm](https://img.shields.io/npm/v/openmrs.js.svg)](https://www.npmjs.com/package/openmrs.js)
+[![npm](https://img.shields.io/npm/dt/openmrs.js.svg)](https://www.npmjs.com/package/openmrs.js)
 
 > JavaScript client library for the [OpenMRS](http://openmrs.org) API
 
