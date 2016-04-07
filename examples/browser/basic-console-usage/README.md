@@ -1,30 +1,16 @@
 <img src="https://talk.openmrs.org/uploads/default/original/2X/f/f1ec579b0398cb04c80a54c56da219b2440fe249.jpg" alt="OpenMRS"/>
 
-# openmrs.js Examples
+# Basic Browser Console Usage
 
-> Demonstrations of how to use `openmrs.js`
+> Example of how to use `openmrs.js` in the browser console
 
-## Node
+![Browser Console](https://www.dropbox.com/s/cxlpmhbvwtvlbww/browser-console-usage.gif?raw=1)
 
-See the following example usages in node.
+## Troubleshooting
 
-### [Basic Console Usage](node/basic-console-usage)
+### Something About <kbd>Access-Control-Allow-Origin</kbd>
 
-A quick demo of how to use `openmrs.js` in the node console.
-
-### [Create Random Patients](node/create-random-patients)
-
-This script will create `n` random patients.
-
-## Browser
-
-### [Basic Console Usage](browser/basic-console-usage)
-
-A quick demo of how to use `openmrs.js` in the browser console.
-
-### Create Patients
-
-This simple form allows you create patients in OpenMRS.
+Read the **HTTP access control (CORS)** section [here](https://github.com/psbrandt/openmrs-contrib-apidocs/tree/swagger-ui#http-access-control-cors).
 
 ## Community
 
