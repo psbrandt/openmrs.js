@@ -35,8 +35,7 @@ const OpenMRS = require('openmrs.js');
 
 ## Usage
 
-:bulb: **You will need version `2.14+` of the [webservices.rest module](https://modules.openmrs.org/#/show/153/webservices-rest). Currently this
-requires building it from [source](https://github.com/openmrs/openmrs-module-webservices.rest).**
+:bulb: **You will need version `2.14+` of the [webservices.rest module](https://modules.openmrs.org/#/show/153/webservices-rest) installed.**
 
 
 ```js
