@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>openmrs.js</title>
+
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAD///8B////Af///wH///8BFajwERWo8FsVqPCfFajwuxWo8LkVqPCXFajwTRWo8Av///8B////Af///wH///8B////Af///wH///8B////ARWo74EVqPD/Fajw/xWo8P8VqPD/Fajw/xWo8P0VqO9j////Af///wH///8B////Af///wH///8B////Af///wERqvWVFajw/xWo8P8VqPD3Fajw+RWo8P8VqO//Ean5d////wH///8B////Af///wH///8B////Af///wH///8BEKz2kxSo8cUVqPBVFajwKRWo8CsVqPBjE6jz1RSo83f///8B////Af///wH///8BpldbC6ZXW2mnVlqBsVFQh0SOwVcMrfkL////Af///wH///8B////ARCo+xdNnnxjjpIAfYSTAH2EkwBf////AaZXW1WmV1v/pldb/6lVWMehW2EF////Af///wH///8B////Af///wH///8BWZthF4uSAOOEkwD/hJMA94STADGmV1ubpldb/6ZXW/+mV1tL////Af///wH///8B////Af///wH///8B////Af///wGGkwBxhJMA/4STAP+EkwB1pldbuaZXW/+mV1vvpldbI////wH///8B////Af///wH///8B////Af///wH///8BhJMAO4STAP+EkwD/hJMAmaZXW7umV1v/pldb7aZXWyH///8B////Af///wH///8B////Af///wH///8B////AYSTADeEkwD/hJMA/4STAJumV1ujpldb/6ZXW/+mV1s/////Af///wH///8B////Af///wH///8B////Af///wGEkwBjhJMA/4STAP+EkwB9pldbYaZXW/+mV1v/qFdZtaZXWwP///8B////Af///wH///8B////Af///wGAkQ8LhZQA0YSTAP+EkwD/hJMAPaZXWxOmV1uPp1daobRWTJ9SYLpF////Af///wH///8B////Af///wEaYf8DVHx8WZCYAKuEkwCphJMAh4STAAf///8B////Af///wH///8BIWXzlyBl9KMiZfIxImXyGSJl8hkiZfI9HGP8sz5yq3f///8B////Af///wH///8B////Af///wH///8B////AR1m+J8iZfL/ImXy+yJl8tsiZfLdImXy/yJl8f8dYvx1////Af///wH///8B////Af///wH///8B////Af///wEjZfGRImXy/yJl8v8iZfL/ImXy/yJl8v8iZfL/ImXxb////wH///8B////Af///wH///8B////Af///wH///8BImXyHSJl8m8iZfKtImXyyyJl8skiZfKpImXyaSJl8hf///8B////Af///wH///8BAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//w%3D%3D"
+        rel="icon" type="image/x-icon" />
+
+    <!--Import Google Icon Font-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/openmrs-js.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/prism.css" media="screen,projection" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav class="grey lighten-4">
+            <div class="nav-wrapper">
+                <div class="brand-logo center">
+                    <svg class="logo-svg" width="100%" viewBox="0 0 1286 397">
+                        <defs>
+                            <linearGradient id="d">
+                                <stop offset="0" stop-color="#f26522" />
+                                <stop offset="1" stop-color="#5b57a6" />
+                            </linearGradient>
+                            <linearGradient id="c">
+                                <stop offset="0" stop-color="#5b57a6" />
+                                <stop offset="1" stop-color="#eea616" />
+                            </linearGradient>
+                            <linearGradient id="b">
+                                <stop offset="0" stop-color="#009384" />
+                                <stop offset="1" stop-color="#eea616" />
+                            </linearGradient>
+                            <linearGradient id="a">
+                                <stop offset="0" stop-color="#f26522" />
+                                <stop offset="1" stop-color="#009384" />
+                            </linearGradient>
+                            <linearGradient xlink:href="#a" id="e" x1="40.894" y1="25.79" x2="84.305" y2="25.79" gradientUnits="userSpaceOnUse" gradientTransform="translate(-39.046 -34.002) scale(3.797)" />
+                            <linearGradient xlink:href="#b" id="f" x1="97.324" y1="39.647" x2="96.983" y2="83.544" gradientUnits="userSpaceOnUse" gradientTransform="translate(-39.046 -34.002) scale(3.797)" />
+                            <linearGradient xlink:href="#c" id="g" x1="40.895" y1="97.195" x2="84.305" y2="97.195" gradientUnits="userSpaceOnUse" gradientTransform="translate(-39.046 -34.002) scale(3.797)" />
+                            <linearGradient xlink:href="#d" id="h" x1="26.126" y1="39.647" x2="25.553" y2="83.08" gradientUnits="userSpaceOnUse" gradientTransform="translate(-39.046 -34.002) scale(3.797)" />
+                        </defs>
+                        <path d="M 120.03063,107.97429 C 140.15261,87.78792 167.94539,75.2969 198.6723,75.2969 c 30.63957,0 58.3847,12.42728 78.50668,32.52602 l 0.0795,-74.30877 C 253.7021,21.34577 226.99324,14.47492 198.67239,14.47492 c -28.32086,0 -55.04164,6.87484 -78.59404,19.0472 l -0.0476,74.45217 z"
+                            id="top" style="fill:none;stroke:url(#e);stroke-width:7.59397411" />
+                        <path d="m 290.10513,120.82106 c 20.18637,20.12198 32.67739,47.91477 32.67739,78.64167 0,30.63956 -12.42729,58.38471 -32.52603,78.5067 l 74.30875,0.0794 c 12.16841,-23.5564 19.03923,-50.26524 19.03923,-78.58609 0,-28.32086 -6.87482,-55.04164 -19.0472,-78.59405 l -74.45214,-0.0476 z"
+                            id="right" style="fill:none;stroke:url(#f);stroke-width:7.59397411" />
+                        <path d="m 277.25831,290.89555 c -20.12197,20.18637 -47.91477,32.67736 -78.64167,32.67736 -30.63955,0 -58.38471,-12.42727 -78.50669,-32.52602 l -0.0793,74.30878 c 23.5564,12.16839 50.26524,19.03923 78.58609,19.03923 28.32087,0 55.04164,-6.87482 78.59404,-19.0472 l 0.0476,-74.45215 z"
+                            id="bottom" style="fill:none;stroke:url(#g);stroke-width:7.59397411" />
+                        <path d="M 107.18384,278.04878 C 86.997464,257.9268 74.506441,230.13403 74.506441,199.4071 c 0,-30.63954 12.42731,-58.38468 32.526059,-78.50666 l -74.308796,-0.0793 c -12.16838,23.55636 -19.039233,50.26523 -19.039233,78.58609 0,28.32085 6.87484,55.04162 19.047202,78.59403 l 74.452167,0.0476 z"
+                            id="left" style="fill:none;stroke:url(#h);stroke-width:7.59397411" />
+                        <path d="M441.378 198.916c0 24.792 17.76 42.727 42.727 42.727 24.968 0 42.727-17.935 42.727-42.727 0-24.792-17.76-42.727-42.727-42.727-24.968 0-42.727 17.93-42.727 42.72zm10.55 0c0-18.287 12.308-33.232 32.177-33.232 19.87 0 32.177 14.945 32.177 33.232 0 18.286-12.308 33.232-32.177 33.232-19.87 0-32.178-14.946-32.178-33.232zm96.136 80.707h10.55V225.29h.35c6.507 11.254 20.398 16.353 32.53 16.353 24.97 0 42.728-17.935 42.728-42.727 0-24.792-17.76-42.727-42.728-42.727-12.132 0-26.023 5.09-32.53 16.35h-.35V158.3h-10.55v121.323zm9.495-80.707c0-18.287 14.77-33.232 33.93-33.232 19.87 0 32.18 14.945 32.18 33.232 0 18.286-12.31 33.232-32.18 33.232-19.17 0-33.94-14.946-33.94-33.232zm164.28 18.814c-5.28 8.792-16.53 14.418-27.26 14.418-24.62 0-30.77-21.803-30.77-30.595h68.22v-7.385c0-18.814-13.19-37.98-38.16-37.98-23.74 0-40.62 18.287-40.62 42.552 0 25.144 16.35 42.903 41.14 42.903 14.42 0 26.9-5.1 35.16-17.407l-7.74-6.506zm-58.03-25.672c0-4.22 6.5-26.374 29.54-26.374 15.64 0 28.13 11.956 28.13 26.374h-57.67zm91.89 47.475h10.55v-40.617c0-22.33 12.48-33.232 28.13-33.232 16.7 0 20.39 12.835 20.39 26.023v47.826h10.55V191.18c0-17.76-5.63-34.99-30.95-34.99-13.19 0-23.568 7.384-27.788 16.35h-.525c-.35-1.58-.53-8.263-.705-14.24h-10.55c0 4.22.88 16.88.88 22.857v58.376zm97.53 0h10.55v-40.617c0-22.33 12.48-33.232 28.13-33.232 11.43 0 16.88 10.022 16.88 24.968v48.88h10.55v-45.715c0-11.605 5.1-28.133 24.62-28.133 16.7 0 20.39 12.835 20.39 26.023v47.826h10.55V191.18c0-17.76-5.63-34.99-30.95-34.99-11.26 0-22.51 5.45-27.61 17.582-3.87-12.308-13.72-17.583-24.44-17.583-13.19 0-23.56 7.38-27.78 16.35h-.53c-.35-1.58-.53-8.27-.707-14.24h-10.55c0 4.22.877 16.88.877 22.85v58.37zm149.73 0h10.55v-44.31c0-15.824 8.26-28.484 26.55-28.484 1.05 0 2.46.17 4.04.7l1.23-10.38c-2.11-.53-4.05-.88-6.16-.88-12.136 0-20.576 6.86-25.85 16.35-.35-1.58-.528-8.27-.704-14.24h-10.55c0 4.22.88 16.88.88 22.85v58.37zm49.24-14.418c6.33 11.253 18.81 16.528 32.7 16.528 15.47 0 29.36-8.44 29.36-25.144 0-32.89-48.18-15.83-48.18-37.81 0-8.44 9.67-13.01 17.23-13.01 9.492 0 15.12 4.04 19.163 11.43l9.493-5.63c-5.277-10.38-15.475-15.3-28.66-15.3-13.366 0-27.784 7.56-27.784 23.38 0 30.95 48.18 15.3 48.18 37.63 0 9.32-9.494 14.94-18.64 14.94-9.493 0-19.163-4.75-23.56-13.37l-9.32 6.33zm84.36 7.033c0 4.748 3.69 8.44 8.44 8.44s8.44-3.692 8.44-8.44c0-4.747-3.69-8.44-8.44-8.44s-8.44 3.693-8.44 8.44zm57.64-73.848h-10.55v96.355c0 9.143-1.41 17.583-12.84 17.583-2.29 0-4.4-.528-6.69-1.407l-1.58 9.32c2.82 1.06 5.63 1.59 8.44 1.59 18.64 0 23.21-11.25 23.21-27.95V158.3zm-13.19-32.18c0 4.397 3.52 7.914 7.91 7.914s7.91-3.517 7.91-7.913c0-4.39-3.52-7.91-7.92-7.91s-7.92 3.52-7.92 7.91zm33.63 98.995c6.33 11.253 18.81 16.528 32.7 16.528 15.47 0 29.36-8.44 29.36-25.144 0-32.89-48.18-15.83-48.18-37.81 0-8.44 9.67-13.01 17.23-13.01 9.493 0 15.12 4.04 19.164 11.43l9.493-5.63c-5.276-10.38-15.475-15.3-28.66-15.3-13.365 0-27.78 7.56-27.78 23.38 0 30.95 48.174 15.3 48.174 37.63 0 9.32-9.5 14.94-18.64 14.94-9.5 0-19.17-4.75-23.56-13.37l-9.32 6.33z"
+                            id="text" style="line-height:125%;-inkscape-font-specification:'Avenir LT Std Light'" font-weight="300" font-size="46.085" font-family="Avenir LT Std" letter-spacing="0" word-spacing="0" opacity="0" />
+                    </svg>
+
+                </div>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <!-- Place this tag where you want the button to render. -->
+                        <!-- Place this tag where you want the button to render. -->
+                        <a class="github-button grey-text text-darken-4" href="https://github.com/psbrandt/openmrs.js" data-style="mega" data-count-href="/psbrandt/openmrs.js/stargazers" data-count-api="/repos/psbrandt/openmrs.js#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star psbrandt/openmrs.js on GitHub">Star</a>
+                    </li>
+                    <li><a title="API Docs" href="https://psbrandt.io/openmrs-contrib-apidocs/" target="_blank"><i class="fa fa-book fa-2x grey-text text-darken-4" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m6 l7 offset-l2">
+            <div id="overview" class="section scrollspy">
+                <h2>Overview</h2>
+                <p>
+                    <b>openmrs.js</b> is a JavaScript library that wraps the <a target="_blank" href="http://openmrs.org">OpenMRS</a> RESTful API. It provides intuitively named methods to perform common OpenMRS actions, such as creating patients, observations,
+                    visits, and much more. It also provides inline help, so you have the <a title="API Docs" href="https://psbrandt.io/openmrs-contrib-apidocs/" target="_blank">API docs</a> right in front of you while you're writing your JavaScript application.
+                </p>
+                <p>
+                    The JavaScript code is dynamically generated from the OpenMRS <a target="_blank" href="https://openapis.org/specification">OpenAPI specification</a>, which is itself generated from the RESTful resources currently available in the system
+                    at runtime. This means that JavaScript functions will only be available for resources that your current version of the <a target="_blank" href="https://modules.openmrs.org/#/show/153/webservices-rest">Rest Web Services Module</a> provides,
+                    as well as any other resources provided by add on modules installed in your system.
+                </p>
+                <p>
+                    The library is <i>isomorphic</i> (or more recently, <i>universal</i>), meaning that you can use it the browser or in your <a target="_blank" href="https://nodejs.org">Node.js</a> application.
+                </p>
+            </div>
+
+            <div id="installation" class="section scrollspy">
+                <h2>Installation</h2>
+                <p>The <b>openmrs.js</b> library is installed using <a target="_blank" href="https://www.npmjs.com/">npm</a>: </p>
+                <pre><code class="language-bash">npm install openmrs.js</code></pre>
+                <p>
+                    Once the library has been installed, both the browser and the Node.js version can be found in the <i>node_modules</i> directory. To use <b>openmrs.js</b> in the browser, add the browser bundle to your HTML page:
+                </p>
+                <p>
+                    <pre><code class="language-markup">&lt;script src="node_modules/openmrs.js/lib/openmrs.bundle.min.js">&lt;/script></code></pre>
+                </p>
+                <p>
+                    To use <b>openmrs.js</b> in Node.js, require the library in your JavaScript:
+                </p>
+                <p>
+                    <pre><code class="language-javascript">const OpenMRS = require('openmrs.js');</code></pre>
+                </p>
+            </div>
+
+            <div id="authentication" class="section scrollspy">
+                <h2>Authentication</h2>
+                <p>The OpenMRS RESTful API uses <a target="_blank" href="https://en.wikipedia.org/wiki/Basic_access_authentication">HTTP Basic Authentication</a>. It is therefore very important to use transport layer security when using the API (i.e. run
+                    OpenMRS over <b>HTTPS</b>).
+                </p>
+
+                <p>
+                    To log into OpenMRS with <b>openmrs.js</b>, run:
+                </p>
+                <pre><code id="login-basic" class="language-javascript"></code></pre>
+                <p>
+                    Alternatively, you can pass in a config object:
+                </p>
+                <pre><code id="login-config" class="language-javascript"></code></pre>
+                <p>
+                    The <code class="language-javascript">login()</code> method returns a <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">promise</a>, so you will need to wait for it to
+                    resolve before using the API. The reason a promise is required, is that <b>openmrs.js</b> is fetching the OpenAPI specification from the server in order to generate the required JavaScript code.
+                </p>
+            </div>
+
+            <div id="getting-help" class="section scrollspy">
+                <h2>Getting Help</h2>
+                <p>
+                    The OpenMRS OpenAPI specification is also used to generate API documentation. Interactive documentation is available at runtime in the OpenMRS application, accessible via the administration page. Click on
+                    <a href="http://uat01.openmrs.org:8080/openmrs/module/webservices/rest/apiDocs.htm" target="_blank">API Documentation</a> link under the <b>REST Web Services</b> menu.
+                </p>
+                <p>
+                    A static version of the API documentation is also available online at <a href="https://psbrandt.io/openmrs-contrib-apidocs/">psbrandt.io/openmrs-contrib-apidocs</a>.
+                </p>
+                <p>
+                    You can also get help directly in the Node.js or browser console, but running something like:
+                </p>
+                <pre><code class="language-javascript">o.api.patient.help();</code></pre>
+                <p>or</p>
+                <pre><code class="language-javascript">o.api.patient.getPatient.help();</code></pre>
+                <p>The latter should return something like:</p>
+                <pre><code class="language-markup">getPatient: Fetch by uuid
+
+  * uuid (string): uuid to filter by
+  * v (string): The representation to return (ref, default, full or custom)</code></pre>
+                <p>Running <code class="language-javascript">o.api.help();</code> will give you a list of all API methods available.
+                <p><i>hint: try this in your browser console now.</i></p>
+            </div>
+
+            <div id="examples" class="section scrollspy">
+                <h2>Examples</h2>
+                <p>The following examples show some of the ways that <b>openmrs.js</b> can be used.</p>
+            </div>
+
+            <div id="patient-examples" class="section scrollspy">
+                <h3>Patient</h3>
+                <p>Create a patient with the minimum possible information:</p>
+                <pre><code id="create-patient" class="language-javascript"></code></pre>
+                <p>Create a patient with more information:</p>
+                <pre><code id="create-patient-more" class="language-javascript"></code></pre>
+                <p><i>hint: try these in your browser console now.</i></p>
+            </div>
+
+        </div>
+
+        <div class="toc-wrapper">
+            <div class="col hide-on-small-only m3 l2 offset-l1">
+                <ul class="section table-of-contents">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#installation">Installation</a></li>
+                    <li><a href="#authentication">Authentication</a></li>
+                    <li><a href="#getting-help"><span style="white-space: nowrap;">Getting Help</span></a></li>
+                    <li><a href="#examples">Examples</a></li>
+                    <li class="submenu"><a href="#patient-examples">Patient</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/animateplus/1.4.0/animate.min.js"></script>
+    <script type="text/javascript" src="js/prism.js"></script>
+    <script type="text/javascript" src="js/openmrs.bundle.min.js"></script>
+    <script type="text/javascript" src="js/beautify.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/chance/1.0.3/chance.min.js"></script>
+    <script type="text/javascript" src="js/openmrs-js.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+</html>

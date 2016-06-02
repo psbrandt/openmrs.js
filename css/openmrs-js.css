@@ -1,0 +1,59 @@
+nav-wrapper {
+    vertical-align: middle;
+}
+nav {
+    height: 110px;
+    line-height: 110px;
+}
+.nav ul {
+    margin: 0;
+}
+.logo-svg {
+    height: 110px;
+}
+.navbar-fixed {
+    height: 110px;
+}
+#nav-mobile > li:nth-child(1) > iframe {
+    margin-top: 40px;
+}
+#nav-mobile > li:nth-child(2) > a {
+    padding-top: 6px;
+}
+.toc-wrapper {
+    position: fixed;
+    left: 80%;
+    z-index: 999;
+}
+.table-of-contents a.active {
+        border-left: 2px solid #777777;
+}
+
+.table-of-contents a:hover {
+        border-left: 1px solid #777777;
+}
+a {
+    color: #009384;
+}
+
+nav ul li:hover {
+   transition: none;
+   background-color: inherit;
+}
+
+nav ul a:hover {
+   transition: none;
+   background-color: inherit;
+}
+
+.submenu a {
+   padding-left: 30px;
+}
+
+.submenu a.active {
+   padding-left: 30px;
+}
+
+.submenu a:hover {
+   padding-left: 30px;
+}
