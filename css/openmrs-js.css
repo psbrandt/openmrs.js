@@ -57,3 +57,7 @@ nav ul a:hover {
 .submenu a:hover {
    padding-left: 30px;
 }
+
+#logo {
+   display: none;
+}

@@ -73,6 +73,7 @@ var animateLogo = function() {
 
 var init = function() {
     // animate logo
+    $('#logo').show();
     animateLogo();
 
     // initializa scrollspy
